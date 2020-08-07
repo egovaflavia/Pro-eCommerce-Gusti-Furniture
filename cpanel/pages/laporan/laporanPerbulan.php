@@ -63,9 +63,11 @@ $db = new Db();
                 <th width="5px">No</th>
                 <th>Nama Pemesan</th>
                 <th>Tgl Pesan</th>
-                <th>Total</th>
+                <th>Sub Total</th>
             </tr>
-            <?php foreach ($db->getLapBulan($_POST['bulan']) as $no => $row) :   ?>
+            <?php foreach ($db->getLapBulan($_POST['bulan']) as $no => $row) :
+                @$total = $row->pemesanan_total;
+            ?>
                 <tr>
                     <td><?= ++$no ?></td>
                     <td><?= $row->member_nama ?></td>
@@ -73,6 +75,10 @@ $db = new Db();
                     <td><?= rupiah($row->pemesanan_total) ?></td>
                 </tr>
             <?php endforeach ?>
+            <tr>
+                <td colspan="3">Total</td>
+                <td><?= rupiah($total)  ?></td>
+            </tr>
         </table>
 
         <div class="float-right mt-5">
