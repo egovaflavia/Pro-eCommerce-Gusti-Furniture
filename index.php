@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+// error_reporting(0);
 include 'cpanel/model/Db.php';
 $db = new Db();
 
@@ -12,18 +12,18 @@ $db = new Db();
 </head>
 
 <body>
-	<!--header-->
-	<?php include '_partials/topBar.php'; ?>
-	<!---->
-	<div class="container">
+
+	<div class="site-wrap">
+		<?php include '_partials/topBar.php'; ?>
+
 		<?php include 'content.php'; ?>
 
-		<?php include '_partials/sideBar.php'; ?>
+		<?php include '_partials/footer.php' ?>
 
-		<div class="clearfix"></div>
 	</div>
 
-	<?php include '_partials/footer.php'; ?>
+	<?php include '_partials/script.php' ?>
+
 </body>
 
 </html>

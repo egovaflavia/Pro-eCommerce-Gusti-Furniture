@@ -1,43 +1,76 @@
-<div class="footer">
-    <div class="footer-top">
-        <div class="container">
-            <div class="latter-right">
-                <p>FOLLOW US</p>
-                <ul class="face-in-to">
-                    <li><a href="https://www.twitter.com"><span> </span></a></li>
-                    <li><a href="https://www.facebook.com"><span class="facebook-in"> </span></a></li>
-                    <div class="clearfix"> </div>
-                </ul>
-                <div class="clearfix"> </div>
+<footer class="site-footer border-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3 class="footer-heading mb-4">Navigations</h3>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <ul class="list-unstyled">
+                            <li><a href="#">Sell online</a></li>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Shopping cart</a></li>
+                            <li><a href="#">Store builder</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <ul class="list-unstyled">
+                            <li><a href="#">Mobile commerce</a></li>
+                            <li><a href="#">Dropshipping</a></li>
+                            <li><a href="#">Website development</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <ul class="list-unstyled">
+                            <li><a href="#">Point of sale</a></li>
+                            <li><a href="#">Hardware</a></li>
+                            <li><a href="#">Software</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="clearfix"> </div>
+            <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                <h3 class="footer-heading mb-4">Promo</h3>
+                <a href="#" class="block-6">
+                    <img src="assets/images/hero_1.jpg" alt="Image placeholder" class="img-fluid rounded mb-4">
+                    <h3 class="font-weight-light  mb-0">Finding Your Perfect Shoes</h3>
+                    <p>Promo from nuary 15 &mdash; 25, 2019</p>
+                </a>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="block-5 mb-5">
+                    <h3 class="footer-heading mb-4">Contact Info</h3>
+                    <ul class="list-unstyled">
+                        <li class="address">203 Fake St. Mountain View, San Francisco, California, USA</li>
+                        <li class="phone"><a href="tel://23923929210">+2 392 3929 210</a></li>
+                        <li class="email">emailaddress@domain.com</li>
+                    </ul>
+                </div>
+
+                <div class="block-7">
+                    <form action="#" method="post">
+                        <label for="email_subscribe" class="footer-heading">Subscribe</label>
+                        <div class="form-group">
+                            <input type="text" class="form-control py-4" id="email_subscribe" placeholder="Email">
+                            <input type="submit" class="btn btn-sm btn-primary" value="Send">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+            <div class="col-md-12">
+                <p>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;<script data-cfasync="false" src="assets//cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+            </div>
+
         </div>
     </div>
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="footer-bottom-cate">
-                <h6>KATEGORI</h6>
-                <ul>
-                    <?php foreach ($db->getAllKategori() as $row) : ?>
-                        <li><a href="<?= $row->kategori_id ?>"><?= $row->kategori_nama ?></a></li>
-                    <?php endforeach ?>
-                </ul>
-            </div>
-            <div class="footer-bottom-cate bottom-grid-cat">
-                <h6>Term & Condition</h6>
-                <p>Jika ingin melakukan pembatalan, <br>Hubungi CS</p>
-            </div>
-            <div class="footer-bottom-cate">
-            </div>
-            <div class="footer-bottom-cate cate-bottom">
-                <h6>Alamat Kami</h6>
-                <ul>
-                    <li class="temp">
-                        <p class="footer-class">Gusti Furniture <a href="index.php?page=pages/lokasi" target="_blank">Klik Disini</a> </p>
-                    </li>
-                </ul>
-            </div>
-            <div class="clearfix"> </div>
-        </div>
-    </div>
-</div>
+</footer>
