@@ -38,7 +38,7 @@
     <nav class="site-navigation text-right text-md-center" role="navigation">
         <div class="container">
             <ul class="site-menu js-clone-nav d-none d-md-block">
-                <li class="has-children active">
+                <!-- <li class="has-children active">
                     <a href="index.html">Home</a>
                     <ul class="dropdown">
                         <li><a href="#">Menu One</a></li>
@@ -53,19 +53,20 @@
                             </ul>
                         </li>
                     </ul>
-                </li>
+                </li> -->
+                <li><a href="shop.html">Home</a></li>
                 <li class="has-children">
-                    <a href="about.html">About</a>
+                    <a href="about.html">Category</a>
                     <ul class="dropdown">
-                        <li><a href="#">Menu One</a></li>
-                        <li><a href="#">Menu Two</a></li>
-                        <li><a href="#">Menu Three</a></li>
+                        <li><a href="index.php?page=pages/allProducts">All</a></li>
+                        <?php foreach ($db->getAllKategori() as $no => $row) : ?>
+                            <li><a href="index.php?page=pages/productsByKategori&id=<?= $row->kategori_id ?>"><?= $row->kategori_nama ?></a></li>
+                        <?php endforeach ?>
                     </ul>
                 </li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="#">Catalogue</a></li>
-                <li><a href="#">New Arrivals</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Daftar</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </div>
     </nav>
