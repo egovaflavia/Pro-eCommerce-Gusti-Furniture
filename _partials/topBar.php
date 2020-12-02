@@ -12,7 +12,7 @@
 
                 <div class="col-12 mb-3 mb-md-0 col-md-4 order-1 order-md-2 text-center">
                     <div class="site-logo">
-                        <a href="index.html" class="js-logo-clone">Shoppers</a>
+                        <a href="index.php" class="js-logo-clone">Shoppers</a>
                     </div>
                 </div>
 
@@ -39,7 +39,7 @@
         <div class="container">
             <ul class="site-menu js-clone-nav d-none d-md-block">
                 <!-- <li class="has-children active">
-                    <a href="index.html">Home</a>
+                    <a href="index.php">Home</a>
                     <ul class="dropdown">
                         <li><a href="#">Menu One</a></li>
                         <li><a href="#">Menu Two</a></li>
@@ -54,9 +54,9 @@
                         </li>
                     </ul>
                 </li> -->
-                <li><a href="shop.html">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li class="has-children">
-                    <a href="about.html">Category</a>
+                    <a href="javascrip:void(0)">Category</a>
                     <ul class="dropdown">
                         <li><a href="index.php?page=pages/allProducts">All</a></li>
                         <?php foreach ($db->getAllKategori() as $no => $row) : ?>
@@ -64,9 +64,16 @@
                         <?php endforeach ?>
                     </ul>
                 </li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Daftar</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <?php if (!empty($_SESSION['member'])) : ?>
+                    <li><a href="index.php?page=pages/akun">Akun Anda</a></li>
+                    <li><a href="index.php?page=pages/chart">Cart</a></li>
+                    <li><a href="index.php?page=pages/history">History</a></li>
+                    <li><a href="logout.php"> Logout</a></li>
+                <?php else : ?>
+                    <li><a href="index.php?page=pages/login">Login</a></li>
+                    <li><a href="index.php?page=pages/regis">Register</a></li>
+                <?php endif ?>
+                <li><a href="index.php?page=pages/profil">Contact Us</a></li>
             </ul>
         </div>
     </nav>

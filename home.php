@@ -51,39 +51,21 @@
 <div class="site-section site-blocks-2">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0" data-aos="fade" data-aos-delay="">
-                <a class="block-2-item" href="#">
-                    <figure class="image">
-                        <img src="assets/images/women.jpg" alt="" class="img-fluid">
-                    </figure>
-                    <div class="text">
-                        <span class="text-uppercase">Collections</span>
-                        <h3>Women</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="100">
-                <a class="block-2-item" href="#">
-                    <figure class="image">
-                        <img src="assets/images/children.jpg" alt="" class="img-fluid">
-                    </figure>
-                    <div class="text">
-                        <span class="text-uppercase">Collections</span>
-                        <h3>Children</h3>
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-6 col-lg-4 mb-5 mb-lg-0" data-aos="fade" data-aos-delay="200">
-                <a class="block-2-item" href="#">
-                    <figure class="image">
-                        <img src="assets/images/men.jpg" alt="" class="img-fluid">
-                    </figure>
-                    <div class="text">
-                        <span class="text-uppercase">Collections</span>
-                        <h3>Men</h3>
-                    </div>
-                </a>
-            </div>
+            <?php
+            foreach ($db->getAllKategori(3) as $no => $row) :
+            ?>
+                <div class="col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0" data-aos="fade" data-aos-delay="">
+                    <a class="block-2-item" href="index.php?page=pages/productsByKategori&id=<?= $row->kategori_id ?>">
+                        <figure class="image">
+                            <img src="assets/images/women.jpg" alt="" class="img-fluid">
+                        </figure>
+                        <div class="text">
+                            <span class="text-uppercase">Collections</span>
+                            <h3><?= $row->kategori_nama ?></h3>
+                        </div>
+                    </a>
+                </div>
+            <?php endforeach ?>
         </div>
     </div>
 </div>
@@ -98,66 +80,20 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="nonloop-block-3 owl-carousel">
-                    <div class="item">
-                        <div class="block-4 text-center">
-                            <figure class="block-4-image">
-                                <img src="assets/images/cloth_1.jpg" alt="Image placeholder" class="img-fluid">
-                            </figure>
-                            <div class="block-4-text p-4">
-                                <h3><a href="#">Tank Top</a></h3>
-                                <p class="mb-0">Finding perfect t-shirt</p>
-                                <p class="text-primary font-weight-bold">$50</p>
+                    <?php foreach ($db->getAllProduk() as $no => $row) : ?>
+                        <div class="item">
+                            <div class="block-4 text-center">
+                                <figure class="block-4-image">
+                                    <img src="cpanel/assets/images/products/<?= $row->produk_gambar ?>" alt="Image placeholder" class="img-fluid">
+                                </figure>
+                                <div class="block-4-text p-4">
+                                    <h3><a href="#"><?= $row->kategori_nama ?></a></h3>
+                                    <p class="mb-0"><?= $row->produk_nama ?></p>
+                                    <p class="text-primary font-weight-bold"><?= rupiah($row->produk_harga) ?></p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="item">
-                        <div class="block-4 text-center">
-                            <figure class="block-4-image">
-                                <img src="assets/images/shoe_1.jpg" alt="Image placeholder" class="img-fluid">
-                            </figure>
-                            <div class="block-4-text p-4">
-                                <h3><a href="#">Corater</a></h3>
-                                <p class="mb-0">Finding perfect products</p>
-                                <p class="text-primary font-weight-bold">$50</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="block-4 text-center">
-                            <figure class="block-4-image">
-                                <img src="assets/images/cloth_2.jpg" alt="Image placeholder" class="img-fluid">
-                            </figure>
-                            <div class="block-4-text p-4">
-                                <h3><a href="#">Polo Shirt</a></h3>
-                                <p class="mb-0">Finding perfect products</p>
-                                <p class="text-primary font-weight-bold">$50</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="block-4 text-center">
-                            <figure class="block-4-image">
-                                <img src="assets/images/cloth_3.jpg" alt="Image placeholder" class="img-fluid">
-                            </figure>
-                            <div class="block-4-text p-4">
-                                <h3><a href="#">T-Shirt Mockup</a></h3>
-                                <p class="mb-0">Finding perfect products</p>
-                                <p class="text-primary font-weight-bold">$50</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="block-4 text-center">
-                            <figure class="block-4-image">
-                                <img src="assets/images/shoe_1.jpg" alt="Image placeholder" class="img-fluid">
-                            </figure>
-                            <div class="block-4-text p-4">
-                                <h3><a href="#">Corater</a></h3>
-                                <p class="mb-0">Finding perfect products</p>
-                                <p class="text-primary font-weight-bold">$50</p>
-                            </div>
-                        </div>
-                    </div>
+                    <?php endforeach ?>
                 </div>
             </div>
         </div>

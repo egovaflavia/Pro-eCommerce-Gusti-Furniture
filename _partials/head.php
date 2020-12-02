@@ -1,4 +1,4 @@
-<title>Shoppers &mdash; Colorlib e-Commerce Template</title>
+<title>Ayesha Collection</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 

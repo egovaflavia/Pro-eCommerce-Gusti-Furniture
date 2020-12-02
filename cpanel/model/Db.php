@@ -152,9 +152,13 @@ class Db extends Conn
     // =========================================================================================
     // Kategori Kategori Kategori Kategori Kategori Kategori Kategori Kategori Kategori Kategori 
     // =========================================================================================
-    public function getAllKategori()
+    public function getAllKategori($limit = null)
     {
-        $query = $this->get("SELECT * FROM tb_kategori");
+        if ($limit == null) {
+            $query = $this->get("SELECT * FROM tb_kategori");
+        } else {
+            $query = $this->get("SELECT * FROM tb_kategori LIMIT $limit");
+        }
         return $query;
     }
 
@@ -233,6 +237,17 @@ class Db extends Conn
                             ORDER BY tb_produk.produk_id 
                             ASC  
                             LIMIT 2");
+        return $query;
+    }
+
+    public function get1Produk()
+    {
+        $query = $this->get("SELECT * FROM tb_produk 
+                            JOIN tb_kategori
+                            ON tb_produk.kategori_id=tb_kategori.kategori_id 
+                            ORDER BY tb_produk.produk_id 
+                            ASC  
+                            LIMIT 1");
         return $query;
     }
 
