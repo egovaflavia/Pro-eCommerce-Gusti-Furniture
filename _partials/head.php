@@ -16,4 +16,4 @@
 
 <link rel="stylesheet" href="assets/css/style.css">
 
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="assets/sweetalert.min.js"></script>

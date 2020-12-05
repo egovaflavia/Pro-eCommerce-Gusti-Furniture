@@ -1,15 +1,15 @@
-<?php
-// error_reporting(0);
-include 'cpanel/model/Db.php';
-$db = new Db();
-
-?>
 <!DOCTYPE html>
 <html>
 
 <head>
 	<?php include '_partials/head.php'; ?>
 </head>
+<?php
+// error_reporting(0);
+include 'cpanel/model/Db.php';
+$db = new Db();
+
+?>
 
 <body>
 

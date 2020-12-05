@@ -1,9 +1,9 @@
 <div class="register" style="padding: 1em 0 2em">
     <div class="login-left">
-        <h3 style="color: #458e95;">Lokasi Gusti Furniture</h3>
+        <h3 style="color: #458e95;">Lokasi Ayesha Collection</h3>
         <p class="text-uppercase">
             <p align="justify">
-                <h4>Rekening Pembayaran Gusti Furniture</h4>
+                <h4>Rekening Pembayaran Ayesha Collection</h4>
                 <p>
                     Lakukan Konfirmasi Pembayaran Jika Telah Transfer, dan Upload Bukti Transfer
                 </p>
@@ -27,7 +27,7 @@
                             521315840321
                         </td>
                         <td>
-                            Gusti Furniture
+                            Ayesha Collection
                         </td>
                     </tr>
                 </table>

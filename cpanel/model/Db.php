@@ -368,8 +368,10 @@ class Db extends Conn
             $_SESSION['keranjang'][$idBarang] = $jumlah;
         }
 
-        echo "<script>alert('Produk Telah Masuk Ke Keranjang Belanja');</script>";
-        echo "<script>window.location='index.php?page=pages/chart'</script>";
+        echo "<script>
+        swal('Success', 'Produk Telah Masuk Ke Keranjang Belanja', 'success');
+        setTimeout(function(){ window.location='index.php?page=pages/chart'; }, 2000)
+        </script>";
     }
     // =========================================================================================
     // Ongkir Ongkir Ongkir Ongkir Ongkir Ongkir Ongkir Ongkir Ongkir Ongkir Ongkir Ongkir Ongkir 
@@ -499,9 +501,10 @@ class Db extends Conn
             $conn->query($query_detail);
         }
         unset($_SESSION['keranjang']);
-        echo "<script>alert('Pembelian Sukses');</script>";
-        echo "<script>window.location='index.php?page=pages/invoice&id=$last_id';</script>";
-        // echo "<script>window.location='index.php?page=module/Nota/index&id=$last_id';</script>";
+        echo "<script>
+        swal('Success', 'Pembelian Sukses', 'success');
+        setTimeout(function(){ window.location='index.php?page=pages/invoice&id=$last_id'; }, 2000)
+        </script>";
     }
 
     // =========================================================================================
@@ -536,19 +539,19 @@ class Db extends Conn
         $pecah = $ambil->fetch_object();
         $cek = $ambil->num_rows;
 
-        if ($cek == 1) {
+        if ($cek >= 1) {
             $_SESSION['member'] = $pecah;
             echo "
             <script>
-            alert('Anda berhasil login');
-            window.location='index.php';
+            swal('Success', 'Anda Berhasil Login', 'success');
+            setTimeout(function(){ window.location='index.php?page=pages/chart'; }, 2000)
             </script>
             ";
         } else {
             echo "
             <script>
-            alert('Username / Password Anda Salah');
-            window.location='index.php?page=pages/history';
+            swal('Danger', 'Username / Password Anda Salah', 'danger');
+            setTimeout(function(){ window.location='index.php?page=pages/login'; }, 2000)
             </script>
             ";
         }
@@ -590,7 +593,8 @@ class Db extends Conn
     {
         session_destroy();
         echo "<script>
-        window.location = 'login.php'
+        swal('Success', 'Berhasil Logout', 'success');
+        setTimeout(function(){ window.location='login.php'; }, 2000)
         </script>";
     }
 
@@ -691,4 +695,66 @@ class Db extends Conn
                     ";
         return $this->get($query);
     }
+
+    // =========================================================================================
+    // Laporan Laporan Laporan Laporan Laporan Laporan Laporan Laporan Laporan Laporan Laporan  
+    // =========================================================================================
+    public function getKomentarByProduk($produk)
+    {
+        $query = $this->get("Select
+        tb_komentar.*,
+        tb_member.*
+    From
+        tb_komentar Inner Join
+        tb_member On tb_member.member_id = tb_komentar.member_id
+    Where tb_komentar.produk_id = '$produk' ");
+        return $query;
+    }
+
+    public function saveKomentar($data)
+    {
+        $idMember = $data['idMember'];
+        $idProduk = $data['idProduk'];
+        $komentar     = $data['komentar'];
+
+        global $conn;
+        $query = "INSERT INTO `tb_komentar`(`member_id`, 
+                                            `produk_id`, 
+                                            `komentar_text`) 
+                                            VALUES (
+                                                '$idMember',
+                                                '$idProduk',
+                                                '$komentar')";
+        return ($conn->query($query)) ? 1 : 0;
+    }
+
+    // public function deletePengguna($id)
+    // {
+    //     global $conn;
+    //     $query = "DELETE FROM tb_pengguna WHERE pengguna_id = '$id'";
+    //     return $conn->query($query);
+    // }
+    // public function getOnePengguna($id)
+    // {
+    //     $query = $this->get("SELECT * FROM tb_pengguna WHERE pengguna_id = '$id'")[0];
+    //     return $query;
+    // }
+    // public function editPengguna($data)
+    // {
+    //     global $conn;
+
+    //     $id       = $data['id'];
+    //     $username = $data['username'];
+    //     $password = $data['password'];
+    //     $nama     = $data['nama'];
+    //     $level    = $data['level'];
+
+    //     $query    = "UPDATE tb_pengguna SET pengguna_username = '$username',
+    //                                         pengguna_password = '$password',
+    //                                         pengguna_nama     = '$nama',
+    //                                         pengguna_level    = '$level'
+    //                                         WHERE
+    //                                         pengguna_id = '$id'";
+    //     return $conn->query($query);
+    // }
 }

@@ -2,7 +2,7 @@
     <!-- Left navbar links -->
     <ul style="font-weight: bold" class="navbar-nav">
         <li class="nav-item">
-            <span class="nav-link"><i class="fas fa-store-alt"></i>&emsp;Gusti Furniture</span>
+            <span class="nav-link"><i class="fas fa-store-alt"></i>&emsp;Ayesha Collection</span>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
             <a href="index.php" class="nav-link">Home</a>

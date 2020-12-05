@@ -12,19 +12,20 @@
 
                 <div class="col-12 mb-3 mb-md-0 col-md-4 order-1 order-md-2 text-center">
                     <div class="site-logo">
-                        <a href="index.php" class="js-logo-clone">Shoppers</a>
+                        <a href="index.php" class="js-logo-clone">Ayesha Collection</a>
                     </div>
                 </div>
 
                 <div class="col-6 col-md-4 order-3 order-md-3 text-right">
                     <div class="site-top-icons">
                         <ul>
-                            <li><a href="#"><span class="icon icon-person"></span></a></li>
-                            <li><a href="#"><span class="icon icon-heart-o"></span></a></li>
+                            <?php if (!empty($_SESSION['member'])) : ?>
+                                <li><a href="index.php?page=pages/akun"><span class="icon icon-person"></span></a></li>
+                            <?php endif; ?>
                             <li>
-                                <a href="cart.html" class="site-cart">
+                                <a href="index.php?page=pages/chart" class="site-cart">
                                     <span class="icon icon-shopping_cart"></span>
-                                    <span class="count">2</span>
+                                    <span class="count"><?= count($_SESSION["keranjang"]) ?></span>
                                 </a>
                             </li>
                             <li class="d-inline-block d-md-none ml-md-0"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu"></span></a></li>
@@ -38,22 +39,6 @@
     <nav class="site-navigation text-right text-md-center" role="navigation">
         <div class="container">
             <ul class="site-menu js-clone-nav d-none d-md-block">
-                <!-- <li class="has-children active">
-                    <a href="index.php">Home</a>
-                    <ul class="dropdown">
-                        <li><a href="#">Menu One</a></li>
-                        <li><a href="#">Menu Two</a></li>
-                        <li><a href="#">Menu Three</a></li>
-                        <li class="has-children">
-                            <a href="#">Sub Menu</a>
-                            <ul class="dropdown">
-                                <li><a href="#">Menu One</a></li>
-                                <li><a href="#">Menu Two</a></li>
-                                <li><a href="#">Menu Three</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li> -->
                 <li><a href="index.php">Home</a></li>
                 <li class="has-children">
                     <a href="javascrip:void(0)">Category</a>

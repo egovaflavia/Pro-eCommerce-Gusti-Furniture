@@ -462,8 +462,10 @@ class Db extends Conf
             $conn->query($query_detail);
         }
         unset($_SESSION['keranjang']);
-        echo "<script>alert('Pembelian Sukses');</script>";
-        echo "<script>window.location='index.php?page=module/Nota/index&id=$last_id';</script>";
+        echo "<script>
+        swal('Success', 'Pembelian Sukses', 'success');
+        setTimeout(function(){ window.location='index.php?page=pages/invoice&id=$last_id'; }, 2000)
+        </script>";
     }
 
     // Pemesanan =================================================================================================
@@ -581,10 +583,10 @@ class Db extends Conf
 
             $_SESSION['akun'] = $pecah;
             echo "
-            <script>
+            <scriptttttt>
             alert('Anda berhasil login');
             window.location='index.php?page=module/Riwayat/index';
-            </script>
+            </scriptttttt>
             ";
         } else {
             echo "

@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+// error_reporting(0);
 include '../../model/Db.php';
 $db = new Db();
 
@@ -8,7 +8,7 @@ $db = new Db();
 <html>
 
 <head>
-	<title>Gusti Furniture</title>
+	<title>Ayesha Collection</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<!-- Tell the browser to be responsive to screen width -->
@@ -103,7 +103,7 @@ $db = new Db();
 				</table>
 				<div class="alert alert-info">
 					Total Yang Akan Di Bayarkan Adalah <b><?= rupiah($dInv->pemesanan_total) ?></b>
-					Silahkan Transfer ke rekening BRI A/n Gusti Furniture : 5461.01.016299.53.7
+					Silahkan Transfer ke rekening BRI A/n Ayesha Collection : 5461.01.016299.53.7
 				</div>
 			</div>
 		</div>

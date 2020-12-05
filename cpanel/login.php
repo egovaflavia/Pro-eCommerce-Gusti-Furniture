@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+// error_reporting(0);
 include 'model/Db.php';
 $db = new Db();
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Gusti Furniture</title>
+  <title>Ayesha Collection</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 <body class="hold-transition login-page">
   <div class="login-box">
     <div class="login-logo">
-      <a href="#"><b>Gusti</b> Furniture</a>
+      <a href="#"><b>Ayesha</b> Collection</a>
     </div>
     <!-- /.login-logo -->
     <div class="card">

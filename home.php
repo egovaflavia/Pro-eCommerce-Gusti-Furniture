@@ -87,7 +87,7 @@
                                     <img src="cpanel/assets/images/products/<?= $row->produk_gambar ?>" alt="Image placeholder" class="img-fluid">
                                 </figure>
                                 <div class="block-4-text p-4">
-                                    <h3><a href="#"><?= $row->kategori_nama ?></a></h3>
+                                    <h3><a href="index.php?page=pages/detail&id=<?= $row->produk_id ?>"><?= $row->kategori_nama ?></a></h3>
                                     <p class="mb-0"><?= $row->produk_nama ?></p>
                                     <p class="text-primary font-weight-bold"><?= rupiah($row->produk_harga) ?></p>
                                 </div>

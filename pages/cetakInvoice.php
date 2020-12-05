@@ -7,9 +7,9 @@ $db = new Db();
 <html>
 
 <head>
-	<title>Gusti Furniture</title>
+	<title>Ayesha Collection</title>
 
-	<link href="../assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
 	<!--theme-style-->
 	<link href="../assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<!--//theme-style-->
@@ -94,17 +94,10 @@ $db = new Db();
 				</table>
 				<div class="alert alert-info">
 					Total Yang Akan Di Bayarkan Adalah <b><?= rupiah($dInv->pemesanan_total) ?></b>
-					Silahkan Transfer ke rekening BRI A/n Gusti Furniture : 5461.01.016299.53.7
+					Silahkan Transfer ke rekening BRI A/n Ayesha Collection : 5461.01.016299.53.7
 				</div>
 			</div>
 		</div>
-
-		<!-- <script>
-	var sub = document.getElementById('sub');
-	sub.style.display.none;
-</script> -->
-
-
 		<div class="clearfix"></div>
 	</div>
 

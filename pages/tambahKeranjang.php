@@ -10,5 +10,7 @@ if (isset($_SESSION['keranjang'][$idBarang])) {
     $_SESSION['keranjang'][$idBarang] = 1;
 }
 
-echo "<script>alert('Produk Telah di Tambah');</script>";
-echo "<script>window.location='index.php?page=pages/chart'</script>";
+echo "
+<script>
+swal('Success', 'Produk telah di tambah', 'success');
+        setTimeout(function(){ window.location='index.php?page=pages/chart'; }, 2000)</script>";

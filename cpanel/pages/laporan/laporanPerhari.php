@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+// error_reporting(0);
 include '../../model/Db.php';
 $db = new Db();
 
@@ -9,7 +9,7 @@ $db = new Db();
 <html>
 
 <head>
-    <title>Gusti Furniture</title>
+    <title>Ayesha Collection</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Tell the browser to be responsive to screen width -->
@@ -47,12 +47,12 @@ $db = new Db();
                 <img src="../../../assets/images/logo.png" alt="No Images">
             </div>
             <div class="col-md-9">
-                <h2>Gusti Furniture</h2>
+                <h2>Ayesha Collection</h2>
                 <p>
                     Memberikan Kemudahan untuk Kebutuhan Rumah Tangga Anda
                     <br>
                     <span class="text-bold">
-                        Jl. Raya Padang Panjang - Bukittinggi, Batipuh Baruah, Batipuh, Kabupaten Tanah Datar, Sumatera Barat 27125
+                        Jl. Andam Dewi, Kubu Marapalam, Kec. Padang Tim., Kota Padang, Sumatera Barat 25125
                     </span>
                     <br>
                     <span class="text-bold">No Hp : 0812-6606-3658</span>

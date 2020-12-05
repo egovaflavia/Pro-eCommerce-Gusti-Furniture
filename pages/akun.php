@@ -2,73 +2,84 @@
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($db->editMember($_POST) > 0) {
         echo "<script>
-        alert('Data Berhasil di Update');
-        window.location='index.php?page=pages/akun';
+        swal('Success', 'Data Berhasil di Update', 'success');
+        setTimeout(function(){ window.location='index.php?page=pages/akun'; }, 2000)
         </script>";
     }
 }
 $dMember = $db->getOneMember($_SESSION['member']->member_id);
 $lahir = explode('/', $dMember->member_tmp_tgl_lahir);
 ?>
-<div class="register" style="padding: 1em 0 2em">
-    <div class=" login-right">
-        <h3 style="color: #458e95;">Akun Anda</h3>
-        <form method="POST">
-            <div class="row" style="padding-left: 1em">
-                <div style="padding-left: 1em" class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div>
-                                <span>Username<label>* Tidak Boleh di Ubah</label></span>
+<div class="bg-light py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mb-0"><a href="index.php">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Contact</strong></div>
+        </div>
+    </div>
+</div>
+
+<div class="site-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="h3 mb-3 text-black">Akun Anda</h2>
+            </div>
+            <div class="col-md-12">
+                <form method="POST">
+                    <div class="p-3 p-lg-5 border">
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <label>Username<label>* Tidak Boleh di Ubah</label></label>
                                 <input value="<?= $dMember->member_id ?>" type="hidden" name="id">
-                                <input value=" <?= $dMember->member_username ?>" style="width: 99%;" name="username" type="text" readonly placeholder="Username">
+                                <input class="form-control" value=" <?= $dMember->member_username ?>" name="username" type="text" readonly placeholder="Username">
                             </div>
-                            <div>
-                                <span>Password<label>*</label></span>
-                                <input value="<?= $dMember->member_password ?>" style="width: 99%;" name="password" type="password">
+                            <div class="col-md-6">
+                                <label>Password<label>*</label></label>
+                                <input class="form-control" value="<?= $dMember->member_password ?>" name="password" type="password">
                             </div>
-                            <div>
-                                <span>Nama<label>*</label></span>
-                                <input value="<?= $dMember->member_nama ?>" style="width: 99%;" name="nama" type="text" placeholder="Nama">
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <label>Nama<label>*</label></label>
+                                <input class="form-control" value="<?= $dMember->member_nama ?>" name="nama" type="text" placeholder="Nama">
                             </div>
-                            <div>
-                                <span>Jenis Kelamin<label>*</label></span>
+                            <div class="col-md-6">
+                                <label>Jenis Kelamin<label>*</label></label>
                                 <select style="width:99%" class="form-control" name="jenisKelamin">
                                     <option value="Laki-Laki">Laki-Laki</option>
                                     <option value="Perempuan">Perempuan</option>
                                 </select>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div>
-                                <span>No Hp/Telephone<label>*</label></span>
-                                <input value="<?= $dMember->member_tlp ?>" style="width: 99%;" name="noHpTlp" type="number" placeholder="No Hp/Telephone">
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <label>No Hp/Telephone<label>*</label></label>
+                                <input class="form-control" value="<?= $dMember->member_tlp ?>" name="noHpTlp" type="number" placeholder="No Hp/Telephone">
                             </div>
-                            <div>
-                                <span>Email<label>*</label></span>
-                                <input value="<?= $dMember->member_email ?>" style="width: 99%;" name="email" type="email" placeholder="Email">
-                            </div>
-                            <div>
-                                <span>Tempat Lahir<label>*</label></span>
-                                <input value="<?= $lahir[0] ?>" style="width: 99%;" name="tmpLahir" type="text" placeholder="Tempat Lahir">
-                            </div>
-                            <div>
-                                <span>Tanggal Lahir<label>*</label></span>
-                                <input value="<?= $lahir[1] ?>" style="width: 99%;" name="tglLahir" type="date" class="form-control" placeholder="Tanggal Lahir">
+                            <div class="col-md-6">
+                                <label>Email<label>*</label></label>
+                                <input class="form-control" value="<?= $dMember->member_email ?>" name="email" type="email" placeholder="Email">
                             </div>
                         </div>
-                        <input style="width: 99.7%" type="submit" value="Update">
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <label>Tempat Lahir<label>*</label></label>
+                                <input class="form-control" value="<?= $lahir[0] ?>" name="tmpLahir" type="text" placeholder="Tempat Lahir">
+                            </div>
+                            <div class="col-md-6">
+                                <label>Tanggal Lahir<label>*</label></label>
+                                <input class="form-control" value="<?= $lahir[1] ?>" name="tglLahir" type="date" class="form-control" placeholder="Tanggal Lahir">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-lg-2">
+                                <input type="submit" class="btn btn-primary btn-lg btn-block" value="Update">
+                            </div>
+                        </div>
                     </div>
-                </div>
             </div>
-        </form>
+        </div>
     </div>
-    <div class="login-left">
-        <h3 style="color: #458e95;">Member Baru</h3>
-        <p class="text-uppercase">
-            Dengan membuat akun menyetujui kentuan yang belaku di perusahaan kamin, anda juga bisa menikmati fitur bebelanja di website ini
-        </p>
-        <a class="acount-btn" href="index.php?page=pages/regis">Buat Akun</a>
-    </div>
-    <div class="clearfix"> </div>
+    </form>
+
 </div>

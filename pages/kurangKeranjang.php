@@ -11,5 +11,8 @@ if ($_SESSION['keranjang'][$idBarang] == 1) {
     unset($_SESSION["keranjang"][$idBarang]);
 }
 
-echo "<script>alert('Produk Telah di Kurang');</script>";
-echo "<script>window.location='index.php?page=pages/chart'</script>";
+echo "
+<script>
+swal('Success', 'Produk telah di kurang', 'success');
+        setTimeout(function(){ window.location='index.php?page=pages/chart'; }, 2000)</script>
+";

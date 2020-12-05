@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+// error_reporting(0);
 include 'model/Db.php';
 $db = new Db();
 if (empty($_SESSION['pengguna'])) {
@@ -14,7 +14,7 @@ if (empty($_SESSION['pengguna'])) {
 <html>
 
 <head>
-  <title>Gusti Furniture</title>
+  <title>Ayesha Collection</title>
   <?php include 'components/head.php' ?>
 </head>
 
