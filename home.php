@@ -1,121 +1,218 @@
-<div class="site-blocks-cover" style="background-image: url(assets/images/hero_1.jpg);" data-aos="fade">
-    <div class="container">
-        <div class="row align-items-start align-items-md-center justify-content-end">
-            <div class="col-md-5 text-center text-md-left pt-5 pt-md-0">
-                <h1 class="mb-2">Finding Your Perfect Shoes</h1>
-                <div class="intro-text text-center text-md-left">
-                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at iaculis quam. Integer accumsan tincidunt fringilla. </p>
-                    <p>
-                        <a href="#" class="btn btn-sm btn-primary">Shop Now</a>
-                    </p>
+<section class="slider_section">
+    <div class="banner_main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mapimg">
+                    <div class="text-bg">
+                        <h1>Undang Mereka ke<br> <strong class="black_bold">Pernikahan</strong><br></h1>
+                        <a href="#"><b>Pesan Sekarang </b><i class='fa fa-angle-right'></i></a>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                    <div class="text-img">
+                        <figure><img src="assets/utama.jpg" /></figure>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="site-section site-section-sm site-blocks-1">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4" data-aos="fade-up" data-aos-delay="">
-                <div class="icon mr-4 align-self-start">
-                    <span class="icon-truck"></span>
-                </div>
-                <div class="text">
-                    <h2 class="text-uppercase">Free Shipping</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at iaculis quam. Integer accumsan tincidunt fringilla.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="icon mr-4 align-self-start">
-                    <span class="icon-refresh2"></span>
-                </div>
-                <div class="text">
-                    <h2 class="text-uppercase">Free Returns</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at iaculis quam. Integer accumsan tincidunt fringilla.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 d-lg-flex mb-4 mb-lg-0 pl-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="icon mr-4 align-self-start">
-                    <span class="icon-help"></span>
-                </div>
-                <div class="text">
-                    <h2 class="text-uppercase">Customer Support</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at iaculis quam. Integer accumsan tincidunt fringilla.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="site-section site-blocks-2">
-    <div class="container">
-        <div class="row">
-            <?php
-            foreach ($db->getAllKategori(3) as $no => $row) :
-            ?>
-                <div class="col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0" data-aos="fade" data-aos-delay="">
-                    <a class="block-2-item" href="index.php?page=pages/productsByKategori&id=<?= $row->kategori_id ?>">
-                        <figure class="image">
-                            <img src="assets/images/women.jpg" alt="" class="img-fluid">
-                        </figure>
-                        <div class="text">
-                            <span class="text-uppercase">Collections</span>
-                            <h3><?= $row->kategori_nama ?></h3>
-                        </div>
-                    </a>
-                </div>
-            <?php endforeach ?>
-        </div>
-    </div>
-</div>
-
-<div class="site-section block-3 site-blocks-2 bg-light">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-7 site-section-heading text-center pt-4">
-                <h2>Featured Products</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="nonloop-block-3 owl-carousel">
-                    <?php foreach ($db->getAllProduk() as $no => $row) : ?>
-                        <div class="item">
-                            <div class="block-4 text-center">
-                                <figure class="block-4-image">
-                                    <img src="cpanel/assets/images/products/<?= $row->produk_gambar ?>" alt="Image placeholder" class="img-fluid">
-                                </figure>
-                                <div class="block-4-text p-4">
-                                    <h3><a href="index.php?page=pages/detail&id=<?= $row->produk_id ?>"><?= $row->kategori_nama ?></a></h3>
-                                    <p class="mb-0"><?= $row->produk_nama ?></p>
-                                    <p class="text-primary font-weight-bold"><?= rupiah($row->produk_harga) ?></p>
+<!-- discount -->
+<div class="container">
+    <div id="myCarousel" class="carousel slide banner_Client" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="carousel-caption text">
+                        <div class="row">
+                            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+                                <div class="img_bg">
+                                    <h3>Berikan Kesan<br> <strong class="black_nolmal">Terhadap Tamu</strong></h3>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                                <div class="img_bg">
+                                    <figure><img src="assets/images/discount.jpg" /></figure>
                                 </div>
                             </div>
                         </div>
-                    <?php endforeach ?>
+
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="carousel-caption text">
+                        <div class="row">
+                            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+                                <div class="img_bg">
+                                    <h3>Ini Adalah<br> <strong class="black_nolmal">Hari Mu</strong></h3>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                                <div class="img_bg">
+                                    <figure><img src="assets/images/discount.jpg" /></figure>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="carousel-caption text">
+                        <div class="row">
+                            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+                                <div class="img_bg">
+                                    <h3>Tetapkan Undanganmu<br> <strong class="black_nolmal">Sekarang Juga</strong></h3>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                                <div class="img_bg">
+                                    <figure><img src="assets/images/discount.jpg" /></figure>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<!-- end discount -->
+<!-- trending -->
+<div class="trending">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="title">
+                    <h2>Undangan <strong class="black">Terbaik</strong></h2>
 
-<div class="site-section block-8">
-    <div class="container">
-        <div class="row justify-content-center  mb-5">
-            <div class="col-md-7 site-section-heading text-center pt-4">
-                <h2>Big Sale!</h2>
+                </div>
             </div>
         </div>
-        <div class="row align-items-center">
-            <div class="col-md-12 col-lg-7 mb-5">
-                <a href="#"><img src="assets/images/blog_1.jpg" alt="Image placeholder" class="img-fluid rounded"></a>
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 margitop">
+                <div class="trending-box">
+                    <figure><img src="assets/images/1.jpg" /></figure>
+                    <h3>Outdoor</h3>
+
+                </div>
             </div>
-            <div class="col-md-12 col-lg-5 text-center pl-md-5">
-                <h2><a href="#">50% less in all items</a></h2>
-                <p class="post-meta mb-4">By <a href="#">Carl Smith</a> <span class="block-8-sep">&bullet;</span> September 3, 2018</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam iste dolor accusantium facere corporis ipsum animi deleniti fugiat. Ex, veniam?</p>
-                <p><a href="#" class="btn btn-primary btn-sm">Shop Now</a></p>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                <div class="trending-box">
+                    <figure><img src="assets/images/2.jpg" /></figure>
+                    <h3>Living Room</h3>
+
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 margitop">
+                <div class="trending-box">
+                    <figure><img src="assets/images/3.jpg" /></figure>
+                    <h3>Bedroom Lighting</h3>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- end trending -->
+
+<!-- our brand -->
+<div class="brand">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    <h2>Featured <strong class="black">Brands</strong></h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="brand-bg">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
+                <div class="brand-box">
+                    <i><img src="assets/icon/p1.png" /></i>
+                    <h3>Jane Lauren Design Chair</h3>
+                    <span>$80.00</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
+                <div class="brand-box">
+                    <i><img src="assets/icon/p2.png" /></i>
+                    <h3>Jane Lauren Design Chair</h3>
+                    <span>$80.00</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <div class="brand-box">
+                    <i><img src="assets/icon/p3.png" /></i>
+                    <h3>Jane Lauren Design Chair</h3>
+                    <span>$80.00</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <div class="brand-box">
+                    <i><img src="assets/icon/p4.png" /></i>
+                    <h3>Jane Lauren Design Chair</h3>
+                    <span>$80.00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end our brand -->
+<!-- map -->
+<div class="contact">
+    <div class="container-fluid padddd">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="title">
+                    <h2>Hubungi <strong class="black">Kami</strong></h2>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 padddd">
+                <div class="map_section">
+                    <div id="map">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 padddd">
+                <form class="main_form">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <input class="form-control" placeholder="Name" type="text" name="Name">
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <input class="form-control" placeholder="Email" type="text" name="Email">
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <input class="form-control" placeholder="Phone" type="text" name="Phone">
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <textarea class="textarea" placeholder="Message" type="text" name="Message"></textarea>
+                        </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <button class="send">Send</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
