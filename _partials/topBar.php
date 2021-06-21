@@ -17,9 +17,7 @@
                 <li><a href="index.php?page=pages/login">Login</a></li>
                 <li><a href="index.php?page=pages/regis">Register</a></li>
             <?php endif ?>
-            <li> <a href="about.html">Tentang Kami</a></li>
-            <li> <a href="contact.html">Kontak</a></li>
-
+            <li> <a href="index.php?page=pages/profil">Tentang Kami</a></li>
         </ul>
 
     </nav>
@@ -36,7 +34,7 @@
                     <div class="full">
                         <div class="center-desk">
                             <div class="logo">
-                                <a href="index.html"><img src="assets/logo.png" alt="#"></a>
+                                <a class="ml-3" href="index.php"><img src="assets/logo.png" alt="#"></a>
                             </div>
                         </div>
                     </div>
@@ -50,7 +48,7 @@
                                 </li>
                             <?php endif; ?>
                             <li>
-                                <a href="#"><img style="margin-right: 15px;" src="assets/icon/3.png" alt="#" /></a>
+                                <a href="index.php?page=pages/chart"><img style="margin-right: 15px;" src="assets/icon/3.png" alt="#" /></a>
                             </li>
 
                             <li>

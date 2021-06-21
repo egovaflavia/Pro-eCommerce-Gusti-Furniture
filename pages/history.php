@@ -27,50 +27,54 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
-<div class="bg-light py-3">
-	<div class="container">
+<div class="contactus">
+	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-12 mb-0"><a href="index.php">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">History Belanja</strong></div>
+			<div class="col-md-8 offset-md-2">
+				<div class="title">
+					<h2>History Belanja</h2>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
 
-<div class="site-section">
-	<div class="container">
-		<div class="row mb-5">
-			<form class="col-md-12" method="post">
-				<div class="site-blocks-table">
-					<table class="table table-bordered">
-						<thead>
+<!-- map -->
+<div class="contact">
+	<div class="container-fluid padddd">
+
+		<div class="row">
+			<div class="col-xl-8 center mb-5 col-lg-8 col-md-12 col-sm-12 padddd">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>No</th>
+							<th>Tanggal Belanja</th>
+							<th>Status</th>
+							<th>Total Harga</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php foreach ($dPemesanan as $no => $dProduk) :
+						?>
 							<tr>
-								<th>No</th>
-								<th>Tanggal Belanja</th>
-								<th>Status</th>
-								<th>Total Harga</th>
-								<th>Action</th>
+								<td><?= ++$no ?></td>
+								<td><?= tgl_indo($dProduk->pemesanan_tgl) ?></td>
+								<td><span class="text-warning"><?= $dProduk->pemesanan_status ?></span></td>
+								<td><?= rupiah($dProduk->pemesanan_total) ?></td>
+								<td width='270px'>
+									<?php if ($dProduk->pemesanan_status == 'Pending') : ?>
+										<a href="index.php?page=pages/pembayaran&id=<?= $dProduk->pemesanan_id ?>" class="btn btn-success">Pembayaran</a>
+									<?php endif ?>
+									<a href="pages/cetakInvoice.php?id=<?= $dProduk->pemesanan_id ?>" class="btn btn-warning" target="blank">Cetak</a>
+									<a href="index.php?page=pages/detailBelanja&id=<?= $dProduk->pemesanan_id ?>" class="btn btn-info">Detail</a>
+								</td>
 							</tr>
-						</thead>
-						<tbody>
-							<?php foreach ($dPemesanan as $no => $dProduk) :
-							?>
-								<tr>
-									<td><?= ++$no ?></td>
-									<td><?= tgl_indo($dProduk->pemesanan_tgl) ?></td>
-									<td><span class="text-warning"><?= $dProduk->pemesanan_status ?></span></td>
-									<td><?= rupiah($dProduk->pemesanan_total) ?></td>
-									<td width='270px'>
-										<?php if ($dProduk->pemesanan_status == 'Pending') : ?>
-											<a href="index.php?page=pages/pembayaran&id=<?= $dProduk->pemesanan_id ?>" class="btn btn-success">Pembayaran</a>
-										<?php endif ?>
-										<a href="pages/cetakInvoice.php?id=<?= $dProduk->pemesanan_id ?>" class="btn btn-warning" target="blank">Cetak</a>
-										<a href="index.php?page=pages/detailBelanja&id=<?= $dProduk->pemesanan_id ?>" class="btn btn-info">Detail</a>
-									</td>
-								</tr>
-							<?php endforeach ?>
-						</tbody>
-					</table>
-				</div>
-			</form>
+						<?php endforeach ?>
+					</tbody>
+				</table>
+			</div>
 		</div>
 	</div>
 </div>

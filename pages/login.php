@@ -4,7 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
-<div class="site-section">
+<!-- <div class="site-section">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -42,6 +42,49 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <dt class="mb-0">Dengan membuat akun menyetujui kentuan yang belaku di perusahaan kamin, anda juga bisa menikmati fitur bebelanja di website ini</dt>
                     </dl>
                 </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+<div class="contactus">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="title">
+                    <h2>Login</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- map -->
+<div class="contact">
+    <div class="container-fluid padddd">
+        <div class="row">
+            <div class="col-xl-8 center mb-5 col-lg-8 col-md-12 col-sm-12 padddd">
+                <form method="post">
+                    <div class="p-3 p-lg-5 border">
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <label for="username" class="text-black">Username <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="username" name="username">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="password" class="text-black">Password <span class="text-danger">*</span></label>
+                                <input type="password" class="form-control" id="password" name="password">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-lg-12">
+                                <input type="submit" class="btn btn-primary btn-lg btn-block" value="Login">
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

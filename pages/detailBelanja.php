@@ -79,7 +79,7 @@ $dInv = $db->getOnePemesanan($_GET['id']);
 				</table>
 				<div class="alert alert-info">
 					Total Yang Akan Di Bayarkan Adalah <b><?= rupiah($dInv->pemesanan_total) ?></b>
-					Silahkan Transfer ke rekening BRI A/n Ayesha Collection : 5461.01.016299.53.7
+					Silahkan Transfer ke rekening BRI A/n Royya Studio Foto : 5461.01.016299.53.7
 				</div>
 			</div>
 		</div>

@@ -54,7 +54,7 @@ $item = count($dPro);
                         <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
                             <div class="block-4 text-center border">
                                 <figure class="block-4-image">
-                                    <a href="index.php?page=pages/detail&id=<?= $row->produk_id ?>"><img src="cpanel/assets/images/products/<?php echo $row->produk_gambar ?>" alt="Image placeholder" class="img-fluid"></a>
+                                    <a href="index.php?page=pages/detail&id=<?= $row->produk_id ?>"><img src="admin/assets/images/products/<?php echo $row->produk_gambar ?>" alt="Image placeholder" class="img-fluid"></a>
                                 </figure>
                                 <div class="block-4-text p-4">
                                     <h3><a href="index.php?page=pages/detail&id=<?= $row->produk_id ?>"><?= $row->kategori_nama ?></a></h3>

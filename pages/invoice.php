@@ -14,15 +14,21 @@ $dInv = $db->getOnePemesanan($_GET['id']);
 // }
 ?>
 
-<div class="bg-light py-3">
-	<div class="container">
+
+<div class="contactus">
+	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-12 mb-0"><a href="index.php">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Invoice</strong></div>
+			<div class="col-md-8 offset-md-2">
+				<div class="title">
+					<h2>Invoice</h2>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
 
-<div class="site-section">
+<!-- map -->
+<div class="contact">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
@@ -83,7 +89,7 @@ $dInv = $db->getOnePemesanan($_GET['id']);
 				</table>
 				<div class="alert alert-info">
 					Total Yang Akan Di Bayarkan Adalah <b><?= rupiah($dInv->pemesanan_total) ?></b>
-					Silahkan Transfer ke rekening BRI A/n Ayesha Collection : 5461.01.016299.53.7
+					Silahkan Transfer ke rekening BRI A/n Royya Studio Foto : 5461.01.016299.53.7
 				</div>
 			</div>
 			<div class="col-md-12">

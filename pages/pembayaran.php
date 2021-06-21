@@ -5,21 +5,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 ?>
 
-<div class="bg-light py-3">
-    <div class="container">
+
+
+<div class="contactus">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12 mb-0"><a href="index.php">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Pembayaran</strong></div>
+            <div class="col-md-8 offset-md-2">
+                <div class="title">
+                    <h2>Pembayaran</h2>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="site-section">
-    <div class="container">
-        <div class="row p-3 p-lg-5 border">
-            <div class="col-md-12">
+<!-- map -->
+<div class="contact">
+    <div class="container-fluid padddd">
+        <div class="row">
+            <div class="col-xl-8 center mb-5 col-lg-8 col-md-12 col-sm-12 padddd">
                 <div class="alert alert-info">
                     Total Yang Akan Di Bayarkan Adalah <b><?= rupiah($data->pemesanan_total) ?></b>
-                    Silahkan Transfer ke rekening BRI A/n Ayesha Collection : 5461.01.016299.53.7
+                    Silahkan Transfer ke rekening BRI A/n Royya Studio Foto : 5461.01.016299.53.7
                 </div>
                 <p>Jika anda telah mentransfer pembayaran, harap isi form pembayaran agar bisa di konfirmasi</p>
                 <form method="POST" enctype="multipart/form-data">
@@ -61,9 +68,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
                     </div>
                 </form>
-            </div>
-            <div class="col-md-12">
-
             </div>
         </div>
     </div>

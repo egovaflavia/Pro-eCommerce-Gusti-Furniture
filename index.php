@@ -1,6 +1,6 @@
 <?php
 // error_reporting(0);
-include 'cpanel/model/Db.php';
+include 'admin/model/Db.php';
 $db = new Db();
 
 ?>
@@ -15,18 +15,18 @@ $db = new Db();
 <body class="main-layout">
 
 	<!-- loader  -->
-	<div class="loader_bg">
+	<!-- <div class="loader_bg">
 		<div class="loader"><img src="assets/images/loading.gif" alt="#" /></div>
-	</div>
+	</div> -->
 	<!-- end loader -->
 
 	<div class="wrapper">
 
 		<?php include '_partials/topBar.php'; ?>
-		
+
 		<div id="content">
 			<?php include 'content.php'; ?>
-			
+
 			<!--  footer -->
 			<?php include '_partials/footer.php' ?>
 			<!-- end footer -->

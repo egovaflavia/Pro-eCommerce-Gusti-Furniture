@@ -1,5 +1,5 @@
 <?php
-include '../cpanel/model/Db.php';
+include '../admin/model/Db.php';
 $db = new Db();
 
 ?>
@@ -7,7 +7,7 @@ $db = new Db();
 <html>
 
 <head>
-	<title>Ayesha Collection</title>
+	<title>Royya Studio Foto</title>
 
 	<link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
 	<!--theme-style-->
@@ -94,7 +94,7 @@ $db = new Db();
 				</table>
 				<div class="alert alert-info">
 					Total Yang Akan Di Bayarkan Adalah <b><?= rupiah($dInv->pemesanan_total) ?></b>
-					Silahkan Transfer ke rekening BRI A/n Ayesha Collection : 5461.01.016299.53.7
+					Silahkan Transfer ke rekening BRI A/n Royya Studio Foto : 5461.01.016299.53.7
 				</div>
 			</div>
 		</div>
