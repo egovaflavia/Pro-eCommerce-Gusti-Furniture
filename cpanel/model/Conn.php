@@ -1,8 +1,8 @@
 <?php
-error_reporting(0);
+// error_reporting(0);
 // $conn = mysqli_connect('localhost', 'id13740141_root', '_HfDp>wBGt_Xr-6?', 'id13740141_db_gusti_furniture');
 // $conn = mysqli_connect('localhost', 'root', 'mysql', 'db_gusti_furniture');
-$conn = mysqli_connect('localhost', 'root', 'usbw', 'app');
+$conn = mysqli_connect('localhost', 'root', 'mysql', 'db_furniture');
 if ($conn->connect_errno) {
     echo "Filed to connect database : " . $conn->connect_errno;
     exit;

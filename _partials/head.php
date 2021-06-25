@@ -17,5 +17,5 @@
 <!--fonts-->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <!--//fonts-->
-<script src="js/jquery.min.js"></script>
+<script src="assets/js/jquery.min.js"></script>
 <!--script-->

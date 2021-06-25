@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+// error_reporting(0);
 include 'cpanel/model/Db.php';
 $db = new Db();
 
